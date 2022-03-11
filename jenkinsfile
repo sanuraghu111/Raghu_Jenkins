@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
+                git branch: 'main', changelog: false, credentialsId: 'f3fec01a-8c46-4c31-bf58-ed0dfcf096dc', poll: false, url: 'https://github.com/sanuraghu111/Raghu_Jenkins.git'
             }
         }
         stage('Test') { 
